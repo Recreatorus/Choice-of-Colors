@@ -1,53 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fashion Picker</title>
+    <meta name="referrer" content="origin" />
+    <link rel="canonical" href="https://recreatorus.github.io/Choice-of-Colors/" />
+    <link rel="icon" type="image/png" href="./favicon.ico" />
+    <meta name="copyright" content="@Recreatorus" />
+    <meta name="author" content="@Recreatorus" />
+    <meta name="description" content="Choice of Colors" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://recreatorus.github.io/Choice-of-Colors/" />
+    <meta property="og:title" content="Fashion Picker" />
+    <meta property="og:image" content="https://recreatorus.github.io/Choice-of-Colors/fashionpicker.jpg" />
+    <meta property="og:image:width" content="968" />
+    <meta property="og:image:height" content="504" />
+    <meta property="og:site_name" content="@Recreatorus" />
+    <meta property="og:description" content="Choice of Colors" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fashion Picker" />
+    <meta name="twitter:description" content="Choice of Colors" />
+    <meta name="twitter:url" content="https://recreatorus.github.io/Choice-of-Colors/" />
+    <meta name="twitter:image" content="https://recreatorus.github.io/Choice-of-Colors/fashionpicker.jpg" />
+    <meta name="twitter:image:alt" content="Choice of Colors" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Choice of Colors</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-  <h1>Choice of Colors</h1>
-  <div class="model">
-    <div class="man card active">
-      <img src="./man.png" alt="" class="base" id="man">
-      <div class="mask" id="shirt-target">
-        <div class="color-block" id="shirt-color-block"></div>
+  <body>
+    <h1>Choice of Colors</h1>
+    <div class="model">
+      <div class="man card active">
+        <img src="./man.png" alt="" class="base" id="man" />
+        <div class="mask" id="shirt-target">
+          <div class="color-block" id="shirt-color-block"></div>
+        </div>
+        <div class="mask" id="pants-target">
+          <div class="color-block" id="pants-color-block"></div>
+        </div>
       </div>
-      <div class="mask" id="pants-target">
-        <div class="color-block" id="pants-color-block"></div>
+      <div class="woman card">
+        <img src="./woman.png" alt="" class="base" id="woman" />
+        <div class="mask" id="blouse-target">
+          <div class="color-block" id="blouse-color-block"></div>
+        </div>
+        <div class="mask" id="skirt-target">
+          <div class="color-block" id="skirt-color-block"></div>
+        </div>
+      </div>
+      <div class="color-1" onclick="this.classList.toggle('active')">
+        +
+        <div class="option preset" data-color="rgb(255,255,255)"></div>
+        <div class="option preset" data-color="rgb(192 193 224)"></div>
+        <div class="option preset" data-color="rgb(163 163 163)"></div>
+        <div class="option picker"><input type="color" id="input-color-shirt" value="#c9c9c9" /></div>
+      </div>
+      <div class="color-2" onclick="this.classList.toggle('active')">
+        +
+        <div class="option preset" data-color="rgb(255,255,255)"></div>
+        <div class="option preset" data-color="rgb(222 222 222)"></div>
+        <div class="option preset" data-color="rgb(224 214 197)"></div>
+        <div class="option picker"><input type="color" id="input-color-pants" value="#c9c9c9" /></div>
+      </div>
+      <div class="gender">
+        <div class="man active">men</div>
+        <div class="woman">women</div>
       </div>
     </div>
-    <div class="woman card">
-      <img src="./woman.png" alt="" class="base" id="woman">
-      <div class="mask" id="blouse-target">
-        <div class="color-block" id="blouse-color-block"></div>
-      </div>
-      <div class="mask" id="skirt-target">
-        <div class="color-block" id="skirt-color-block"></div>
-      </div>
-    </div>
-    <div class="color-1" onclick="this.classList.toggle('active')">
-      +
-      <div class="option preset" data-color="rgb(255,255,255)"></div>
-      <div class="option preset" data-color="rgb(192 193 224)"></div>
-      <div class="option preset" data-color="rgb(163 163 163)"></div>
-      <div class="option picker"><input type="color" id="input-color-shirt" value="#c9c9c9"></div>
-    </div>
-    <div class="color-2" onclick="this.classList.toggle('active')">
-      +
-      <div class="option preset" data-color="rgb(255,255,255)"></div>
-      <div class="option preset" data-color="rgb(222 222 222)"></div>
-      <div class="option preset" data-color="rgb(224 214 197)"></div>
-      <div class="option picker"><input type="color" id="input-color-pants" value="#c9c9c9"></div>
-    </div>
-    <div class="gender">
-      <div class="man active">men</div>
-      <div class="woman">women</div>
-    </div>
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
