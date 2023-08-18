@@ -1,2 +1,2 @@
-# Choice-of-Colors
+# Choice of Colors
 Fashion Picker
